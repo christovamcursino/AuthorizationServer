@@ -12,4 +12,8 @@
     <Folder Include="config\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuthorizationServer.Infra.Memory\AuthorizationServer.Infra.Memory.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AuthorizationServer.Domain.Interfaces.Repositories;
+using AuthorizationServer.Domain.Interfaces.Service;
+using AuthorizationServer.Domain.Services;
+using AuthorizationServer.Infra.Memory.Repositories;
+using AuthorizationServer.Scopes;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
 using Microsoft.AspNetCore.Builder;
@@ -18,11 +23,19 @@ namespace AuthorizationServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddSingleton<IClientRepository, ClientMemoryRepository>()
+                    .AddSingleton<IClientService, ClientService>();
+
+
+            //var sp = services.BuildServiceProvider();
+            //IClientService cs = sp.GetService<IClientService>();
+
             services.AddIdentityServer()
-                .AddInMemoryClients(new List<Client>())
-                .AddInMemoryIdentityResources(new List<IdentityResource>())
-                .AddInMemoryApiResources(new List<ApiResource>())
-                .AddTestUsers(new List<TestUser>())
+                .AddInMemoryClients(LocalClient.Get())
+                .AddInMemoryIdentityResources(LocalResources.GetIdentityResources())
+                .AddInMemoryApiResources(LocalResources.GetApiResources())
+                .AddTestUsers(LocalUser.Get())
                 .AddDeveloperSigningCredential();
         }
 
