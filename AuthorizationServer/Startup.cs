@@ -27,7 +27,6 @@ namespace AuthorizationServer
             services.AddSingleton<IClientRepository, ClientMemoryRepository>()
                     .AddSingleton<IClientService, ClientService>();
 
-
             //var sp = services.BuildServiceProvider();
             //IClientService cs = sp.GetService<IClientService>();
 
@@ -37,6 +36,8 @@ namespace AuthorizationServer
                 .AddInMemoryApiResources(LocalResources.GetApiResources())
                 .AddTestUsers(LocalUser.Get())
                 .AddDeveloperSigningCredential();
+
+            services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +51,12 @@ namespace AuthorizationServer
             app.UseRouting();
 
             app.UseIdentityServer();
+
+            app.UseStaticFiles();
+
+            app.UseMvcWithDefaultRoute();
+            
+
 
             /*
             app.UseEndpoints(endpoints =>
