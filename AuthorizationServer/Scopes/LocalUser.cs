@@ -14,11 +14,11 @@ namespace AuthorizationServer.Scopes
         {
             return new List<TestUser> {
             new TestUser {
-                SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
-                Username = "scott",
-                Password = "password",
+                SubjectId = "d7fdb8d6-4bcb-4821-a58f-e86601a0c220",
+                Username = "christo",
+                Password = "christopwd",
                 Claims = new List<Claim> {
-                    new Claim(JwtClaimTypes.Email, "scott@scottbrady91.com"),
+                    new Claim(JwtClaimTypes.Email, "christovamcursino@al.infnet.edu.br"),
                     new Claim(JwtClaimTypes.Role, "admin")
                 }
             }

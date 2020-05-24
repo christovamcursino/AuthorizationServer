@@ -13,16 +13,16 @@ namespace AuthorizationServer.Scopes
         {
             return new List<Client> {
             new Client {
-                ClientId = "oauthClient",
-                ClientName = "Example Client Credentials Client Application",
+                ClientId = "SolidariedadeApi",
+                ClientName = "Api's do sistema de gestão de solidariedade",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = new List<Secret> {
-                    new Secret("superSecretPassword".Sha256())},
-                AllowedScopes = new List<string> {"customAPI.read"}
+                    new Secret("solidariedadeMasterPwd".Sha256())},
+                AllowedScopes = new List<string> { "SolidariedadeApi.read" }
             },
             new Client {
-                ClientId = "openIdConnectClient",
-                ClientName = "Example Implicit Client Application",
+                ClientId = "SolidariedadeApp",
+                ClientName = "Sistema de Gestão de Solidariedade",
                 AllowedGrantTypes = GrantTypes.Implicit,
                 AllowedScopes = new List<string>
                 {
@@ -30,7 +30,7 @@ namespace AuthorizationServer.Scopes
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
                     "role",
-                    "customAPI.write"
+                    "SolidariedadeApi.write"
                 },
                 RedirectUris = new List<string> {"https://localhost:44330/signin-oidc"},
                 PostLogoutRedirectUris = new List<string> {"https://localhost:44330"}
