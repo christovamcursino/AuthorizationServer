@@ -14,7 +14,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Local Login</h3>
+                        <h3 class="panel-title">Entre com seu email</h3>
                     </div>
                     <div class="panel-body">
 
@@ -23,8 +23,8 @@
 
                             <fieldset>
                                 <div class="form-group">
-                                    <label asp-for="Username"></label>
-                                    <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
+                                    <label asp-for="Username">Nome do usuário</label>
+                                    <input class="form-control" placeholder="Nome do usuário" asp-for="Username" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="Password"></label>
@@ -35,13 +35,13 @@
                                     <div class="form-group login-remember">
                                         <label asp-for="RememberLogin">
                                             <input asp-for="RememberLogin">
-                                            <strong>Remember My Login</strong>
+                                            <strong>Lembrar meu login</strong>
                                         </label>
                                     </div>
                                 }
                                 <div class="form-group">
-                                    <button class="btn btn-primary" name="button" value="login">Login</button>
-                                    <button class="btn btn-default" name="button" value="cancel">Cancel</button>
+                                    <button class="btn btn-primary" name="button" value="login">Entrar</button>
+                                    <button class="btn btn-default" name="button" value="cancel">Cancelar</button>
                                 </div>
                             </fieldset>
                         </form>
@@ -55,7 +55,7 @@
             <div class="col-md-6 col-sm-6 external-providers">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">External Login</h3>
+                        <h3 class="panel-title">Acesse pelas suas redes sociais</h3>
                     </div>
                     <div class="panel-body">
                         <ul class="list-inline">
