@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domain", "2-Domain", "{B0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastructure", "4-Infrastructure", "{0FE01CE4-A7F3-440D-A53E-CD974DDD52D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationServer.Domain", "AuthorizationServer.Domain\AuthorizationServer.Domain.csproj", "{FEA3F064-FE41-4802-9373-33499485877C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationServer.Domain", "AuthorizationServer.Domain\AuthorizationServer.Domain.csproj", "{FEA3F064-FE41-4802-9373-33499485877C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationServer.Infra.Memory", "AuthorizationServer.Infra.Memory\AuthorizationServer.Infra.Memory.csproj", "{22C2594F-CBBE-4BAE-9055-4EA2DDEA71A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationServer.Infra.Memory", "AuthorizationServer.Infra.Memory\AuthorizationServer.Infra.Memory.csproj", "{22C2594F-CBBE-4BAE-9055-4EA2DDEA71A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Memory", "Memory", "{D33B74F9-EB43-47F4-BEAD-82194032A27D}"
 EndProject
@@ -23,11 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_-Testing", "_-Testing", "{E045B415-3ECD-4E7E-A0C7-A9BBC020682C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{60A8A278-B144-4E04-901C-F9AE0E038784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tester", "Tester\Tester.csproj", "{60A8A278-B144-4E04-901C-F9AE0E038784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizasionServer.Utils", "AuthorizasionServer.Utils\AuthorizasionServer.Utils.csproj", "{7DFF60EA-3A77-40E7-A966-3C694D6DB469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizasionServer.Utils", "AuthorizasionServer.Utils\AuthorizasionServer.Utils.csproj", "{7DFF60EA-3A77-40E7-A966-3C694D6DB469}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{9CB121FE-6BE3-4EFA-A7CB-DF9D3AAB97AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationServer.MySql.DataAccess", "AuthorizationServer.MySql.DataAccess\AuthorizationServer.MySql.DataAccess.csproj", "{DAB07C8F-738B-41A1-898D-8E230DDEF073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{7DFF60EA-3A77-40E7-A966-3C694D6DB469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DFF60EA-3A77-40E7-A966-3C694D6DB469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DFF60EA-3A77-40E7-A966-3C694D6DB469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB07C8F-738B-41A1-898D-8E230DDEF073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB07C8F-738B-41A1-898D-8E230DDEF073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB07C8F-738B-41A1-898D-8E230DDEF073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB07C8F-738B-41A1-898D-8E230DDEF073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{60A8A278-B144-4E04-901C-F9AE0E038784} = {E045B415-3ECD-4E7E-A0C7-A9BBC020682C}
 		{7DFF60EA-3A77-40E7-A966-3C694D6DB469} = {9CB121FE-6BE3-4EFA-A7CB-DF9D3AAB97AC}
 		{9CB121FE-6BE3-4EFA-A7CB-DF9D3AAB97AC} = {0FE01CE4-A7F3-440D-A53E-CD974DDD52D8}
+		{DAB07C8F-738B-41A1-898D-8E230DDEF073} = {2286C35E-10E5-4C1C-B16B-ACEC9466139B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {096EFBDF-3142-414D-AEDA-CD3163E47823}
