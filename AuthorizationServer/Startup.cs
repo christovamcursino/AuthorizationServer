@@ -71,15 +71,8 @@ namespace AuthorizationServer
                 .AddAspNetIdentity<IdentityUser>(
                     
                 );
+            //Google
 
-            services.AddAuthentication()
-                .AddGoogle("Google", options =>
-                {
-                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-
-                    options.ClientId = "950319915319-n5k6sg60203bmor32jmrf8c82bu63hqh.apps.googleusercontent.com";
-                    options.ClientSecret = "zyrNAByzSp6x049lGrzxTgWN";
-                });
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
